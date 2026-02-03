@@ -43,6 +43,15 @@ CALCULATE (
     SAMEPERIODLASTYEAR ( 'Date'[Date] )
 )
 
+Total Sales = SUM(Sales[SalesAmount])
+
+YoY Sales =
+CALCULATE(
+    [Total Sales],
+    SAMEPERIODLASTYEAR('Date'[Date])
+)
+
+
 YoY Growth % =
 DIVIDE (
     [Total Sales] - [YoY Sales],
